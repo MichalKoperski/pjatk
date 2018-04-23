@@ -23,7 +23,7 @@ class Countries {
         for(String[] k: countries) {
             counter++;
             for(int i=0; i<countries[i].length; i++) {
-                if(choice.equals(k[i])) {
+                if(choice.equalsIgnoreCase(k[i])) {
                     capital = k[1];
                     System.out.println("The capital of "+choice+" is "+capital);
                 }
