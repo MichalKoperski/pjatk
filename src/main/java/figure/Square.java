@@ -1,9 +1,9 @@
 package figure;
 
 public class Square {
-    double side;
+    private double side;
 
-    public Square(final double side) {
+    public Square(double side) {
         this.side = side;
     }
 
@@ -22,8 +22,9 @@ public class Square {
     public double getPerimeter() {
         return 4*side;
     }
+    @Override
     public String toString() {
-        return "Square "+side;
+        return "Square ["+side+"]";
     }
     public Circle getInscribedCircle() {
         return new Circle(side/2);
@@ -32,8 +33,8 @@ public class Square {
         return new Circle(Math.sqrt(2)*side/2);
     }
     public static Circle[] getCircles(Square[] arr) {
-        Circle[] aCircle = new Circle[arr.length-1];
-        for(int i = 0; i<arr.length-1; i++) {
+        Circle[] aCircle = new Circle[arr.length];
+        for(int i = 0; i<arr.length; i++) {
             double a = arr[i].getSide();
             double r = a/Math.sqrt(Math.PI);
             aCircle[i] = new Circle(r);

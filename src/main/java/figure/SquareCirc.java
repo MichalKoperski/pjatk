@@ -12,6 +12,12 @@ public class SquareCirc {
         System.out.print("\nPerimeters: ");
         for (Square s : sqs)
             System.out.print(s.getPerimeter() + " ");
+        System.out.print("\nInscribed in the square circles : "+"\n");
+        for (Square s : sqs)
+            System.out.print(s.getInscribedCircle() + " ");
+        System.out.print("\nCircumscribed about the square circles : "+"\n");
+        for (Square s : sqs)
+            System.out.print(s.getCircumscribedCircle() + " ");
         Circle[] crs = {new Circle(2), new Circle(1),
                 new Circle(3), new Circle(2)};
         Square[] squares = Circle.getSquares(crs);
