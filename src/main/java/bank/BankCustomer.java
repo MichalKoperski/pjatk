@@ -11,6 +11,6 @@ public class BankCustomer {
         return account;
     }
     public String toString() {
-        return "Customer: "+person.getName() +" balance: "+getAccount().getBalance();
+        return "Customer: "+person.getName() +", balance: "+getAccount().getBalance();
     }
 }
